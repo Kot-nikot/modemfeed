@@ -56,7 +56,7 @@ return view.extend({
 		o.default = '64';
 		o.rmempty = true;
 		o.editable = true;
-		o.depends({advanced: '1', method: /ttl/});
+		o.depends({advanced: '1', method: ttl});
 
 		o = s.option(form.Value, 'ports', _('Ports'),
 			_('Incoming ports route to proxy-server<br />Custom ports range: 0-65535'));
@@ -65,7 +65,7 @@ return view.extend({
 		o.value('all', _('ALL Ports'));
 		o.value('http', _('HTTP Ports'));
 		o.default = 'all';
-		o.depends({advanced: '1', method: /proxy/})
+		o.depends({advanced: '1', method: proxy})
 
 		return m.render();
 	},
